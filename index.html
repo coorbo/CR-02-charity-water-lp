@@ -1,47 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charity Water Landing Page</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Charity: Water</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: "Avenir", "Proxima Nova", sans-serif;
+      background-color: #fbe3c1;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    .top-bar {
+      background-color: #53b9be;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: #333;
+      gap: 0.8rem;
+    }
+
+    .brand img {
+      width: 56px;
+      height: auto;
+      border-radius: 12px;
+      background-color: #fef5ec;
+      padding: 4px;
+    }
+
+    .info-button {
+      background-color: #1d1d1d;
+      color: #fff;
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+    }
+
+    .info-button img {
+      width: 20px;
+      height: 20px;
+      margin-right: 0.4rem;
+    }
+
+    .content {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 3rem 2rem;
+    }
+
+    .text {
+      max-width: 600px;
+      flex: 1;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: #2b2b2b;
+    }
+
+    p {
+      font-size: 1rem;
+      margin-bottom: 2rem;
+      max-width: 500px;
+    }
+
+    .donate-button {
+      background-color: #543618;
+      color: #fff;
+      border: none;
+      padding: 0.7rem 1.2rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 4px 0 #2b1c0d;
+    }
+
+    .donate-button:hover {
+      background-color: #2b1c0d;
+    }
+
+    .hero-img {
+      max-width: 500px;
+      height: auto;
+      margin-left: 2rem;
+      border: 10px solid #53b9be;
+      border-radius: 8px;
+      flex: 1;
+    }
+
+    .form-container {
+      display: none;
+      margin-top: 1rem;
+      padding: 1rem;
+      background-color: #fff2db;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      max-width: 400px;
+      font-family: "Avenir", "Proxima Nova", sans-serif;
+    }
+
+    .form-container input {
+      display: block;
+      width: 100%;
+      padding: 0.6rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+      background-color: #fef5ec;
+      color: #333;
+    }
+
+    .form-container button {
+      background-color: #543618;
+      color: white;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 6px;
+      box-shadow: 0 3px 0 #2b1c0d;
+    }
+
+    .form-container button:hover {
+      background-color: #2b1c0d;
+    }
+
+    .balloon {
+      position: absolute;
+      width: 30px;
+      height: 40px;
+      border-radius: 50%;
+      animation: floatDown 3s ease-out forwards;
+      z-index: 9999;
+    }
+
+    #thankYouMsg {
+      font-weight: bold;
+      color: #159A48;
+      display: none;
+      margin-top: 1rem;
+    }
+
+    @keyframes floatDown {
+      0% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh);
+        opacity: 0;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .content {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .hero-img {
+        margin-left: 0;
+        margin-top: 2rem;
+        width: 100%;
+      }
+
+      h1 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    <!-- Hero Section: This is the main banner at the top of the page -->
-    <section class="hero">
-        <!-- Main headline -->
-        <h1>Clean Water for Everyone</h1>
-        <!-- Subheadline -->
-        <p>Join us in bringing safe, clean water to communities in need.</p>
-    </section>
+  <div class="top-bar">
+    <div class="brand">
+      <img src="https://i.postimg.cc/kghJq9FM/Chat-GPT-Image-Jun-8-2025-03-19-15-PM.png" alt="Charity Water logo">
+      Charity: Water
+    </div>
+    <a href="https://www.instagram.com/charitywater" target="_blank" class="info-button">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram icon">
+      more info
+    </a>
+  </div>
 
-    <!-- Story Section: This tells the story of the nonprofit -->
-    <section class="story">
-        <h2>Our Story</h2>
-        <p>
-         
-    </section>
+  <div class="content">
+    <div class="text">
+      <h1>See the Ripple you create</h1>
+      <p>Your contribution creates a ripple of clean water, health, and hope—reaching real people in real places.</p>
+      <button class="donate-button" onclick="document.getElementById('donation-form').style.display='block'">donate now!</button>
 
-    <!-- Real-World Impact Story Section -->
-    <section class="impact-story">
-        <!-- Section headline -->
-        <h2>Real Impact: Meet Amina</h2>
-        <!-- Container for image and text -->
-        <div class="impact-content">
-            <!-- Impact image -->
-            <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Amina smiling with clean water" class="impact-image">
-            <!-- Impact story text -->
-            <p>
-                Amina used to walk miles every day to collect water for her family. Thanks to your support, her village now has a clean water well. Amina can go to school and her family is healthier and happier.
-            </p>
-        </div>
-    </section>
+      <div id="donation-form" class="form-container">
+        <form id="donateForm">
+          <input type="text" id="nameInput" name="name" placeholder="Your Name" required>
+          <input type="number" id="amountInput" name="amount" placeholder="Donation Amount ($)" required>
+          <button type="submit">Submit Donation</button>
+        </form>
+        <p id="thankYouMsg"></p>
+      </div>
+    </div>
+    <img class="hero-img" src="https://i.postimg.cc/5y3JGM2V/Screenshot-2025-06-15-at-2-49-01-PM.png" alt="Kids playing with water">
+  </div>
 
-    <!-- Call-to-Action Section: This encourages visitors to take action -->
-    <section class="call-to-action">
-        <h2>Make a Difference</h2>
-        <p>Your support can help save lives. Every donation brings us closer to a world with clean water for all.</p>
-        <a href="#" class="donate-button">Donate Now</a>
-    </section>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const form = document.getElementById('donateForm');
+      const message = document.getElementById('thankYouMsg');
+
+      form.addEventListener('submit', function (event) {
+        event.preventDefault();
+        const name = document.getElementById('nameInput').value.trim();
+        const amount = document.getElementById('amountInput').value.trim();
+
+        if (name && amount && !isNaN(amount)) {
+          message.textContent = `Thank you, ${name}! You donated $${amount}.`;
+          message.style.display = 'block';
+          form.reset();
+          document.getElementById('donation-form').style.display = 'none';
+          launchBalloonsNew();
+        } else {
+          message.textContent = 'Please enter a valid name and amount.';
+          message.style.display = 'block';
+        }
+      });
+
+      function launchBalloonsNew() {
+        const container = document.createElement('div');
+        container.id = 'balloon-container';
+        container.style.position = 'fixed';
+        container.style.top = 0;
+        container.style.left = 0;
+        container.style.width = '100%';
+        container.style.height = '100%';
+        container.style.pointerEvents = 'none';
+        container.style.zIndex = '9999';
+        document.body.appendChild(container);
+
+        const colors = ['#FFC907', '#8BD1CB', '#4FCB53', '#F16061', '#2E9DF7'];
+        for (let i = 0; i < 20; i++) {
+          const balloon = document.createElement('div');
+          balloon.className = 'balloon';
+          balloon.style.left = Math.random() * 100 + 'vw';
+          balloon.style.top = '-100px';
+          balloon.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+          container.appendChild(balloon);
+        }
+
+        setTimeout(() => container.remove(), 3000);
+      }
+    });
+  </script>
 </body>
 </html>
